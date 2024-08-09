@@ -15,6 +15,7 @@ public class Hernandez_Edwin_Prueba1 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         scan.useDelimiter("\n");
+        Random random = new Random();
 
         int menu = 1;
         int opcion;
@@ -38,8 +39,8 @@ public class Hernandez_Edwin_Prueba1 {
                     System.out.print("Ingrese una opción válida: ");
 
                 } else if (opcion == 1) {
-                    
-                    int contador=0;
+
+                    int contador = 0;
                     String palabra;
                     String palabraInvertida = "";
 
@@ -56,12 +57,12 @@ public class Hernandez_Edwin_Prueba1 {
                         palabraInvertida = letraInvertida + palabraInvertida;
 
                     }
-                    
-                    while (length>0){
+
+                    while (length > 0) {
                         System.out.print(palabraInvertida.charAt(contador));
 
-                    contador++;
-                    length--;
+                        contador++;
+                        length--;
                     }
 
                     System.out.println("\n");
@@ -73,6 +74,29 @@ public class Hernandez_Edwin_Prueba1 {
 
                 } else if (opcion == 3) {
                     System.out.println("\n** Primos **\n");
+
+                    int divisor = 0;
+                    int numeroRandom = random.nextInt(1, 100);
+                    String resultado = "";
+
+                    System.out.println("Número generado: " + numeroRandom);
+
+                    for (int i = 2; i <= Math.sqrt(numeroRandom); i++) {
+                        if (numeroRandom % i == 0) {
+                            divisor = i;
+                            
+                        }
+                    }
+                    
+                    if (divisor == 0) {
+                        resultado = numeroRandom + " es primo";
+
+                    } else {
+                        resultado = numeroRandom + " no es primo";
+
+                    }
+
+                    System.out.println(resultado + "\n");
                     cicloOpcion = 0;
 
                 } else if (opcion == 4) {

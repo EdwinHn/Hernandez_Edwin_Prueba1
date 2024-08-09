@@ -40,6 +40,10 @@ public class Hernandez_Edwin_Prueba1 {
                 //Ingreso de opción inválida 
                 if (opcion < 0 || opcion > 5) {
                     System.out.print("Ingrese una opción válida: ");
+                    
+                    
+                    
+                    
 
                     //Ejercicio 1 - Palabra invertida
                 } else if (opcion == 1) {
@@ -75,11 +79,43 @@ public class Hernandez_Edwin_Prueba1 {
                     System.out.println("\n");
                     cicloOpcion = 0;
 
+                    
+                    
+                    
+                    
                     //Opción 2 - Número Perfecto 
                 } else if (opcion == 2) {
+                    int numeroPerfecto = 0;
+                    int suma = 0;
+
                     System.out.println("\n** Número perfecto **\n");
+
+                    //Ingreso de número
+                    System.out.print("Ingrese un número: ");
+                    numeroPerfecto = scan.nextInt();
+
+                    //Comfirmación
+                    for (int i = 1; i <= numeroPerfecto / 2; i++) {
+                        if (numeroPerfecto % i == 0) {
+                            suma += i;
+                        }
+                    }
+
+                    //Impresión de resultados
+                    if (suma == numeroPerfecto) {
+                        System.out.println(numeroPerfecto + " es un número perfecto\n");
+
+                    } else {
+                        System.out.println(numeroPerfecto + " no es un número perfecto\n");
+
+                    }
+
                     cicloOpcion = 0;
 
+                    
+                    
+                    
+                    
                     //Opción 3 - Primos
                 } else if (opcion == 3) {
                     System.out.println("\n** Primos **\n");
@@ -112,6 +148,10 @@ public class Hernandez_Edwin_Prueba1 {
                     System.out.println(resultado + "\n");
                     cicloOpcion = 0;
 
+                    
+                    
+                    
+                    
                     //Opción 4 - Votaciones
                 } else if (opcion == 4) {
 
@@ -203,7 +243,7 @@ public class Hernandez_Edwin_Prueba1 {
 
                     }
 
-                    //Impresión de resultados
+                    //Impresión de resultados y regreso al menú
                     System.out.println("\n - Resultados -\n");
                     System.out.println("AMARILLO: " + votoAmarillo);
                     System.out.println("AZUL: " + votoAzul);
@@ -221,6 +261,10 @@ public class Hernandez_Edwin_Prueba1 {
 
                     cicloOpcion = 0;
 
+                    
+                    
+                    
+                    
                     //Opción 5- Salir
                 } else if (opcion == 5) {
                     System.out.println("\nadios :)");
